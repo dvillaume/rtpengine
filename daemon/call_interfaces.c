@@ -2064,7 +2064,7 @@ const char *call_play_media_ng(bencode_item_t *input, bencode_item_t *output) {
 		if (!monologue->player)
 			monologue->player = media_player_new(monologue);
 		
-		repeat_times = bencode_dictionary_get_int_str(input, "repeat_times", 1)
+		repeat_times = bencode_dictionary_get_int_str(input, "repeat_times", 1);
 		
 		err = "No media file specified";
 		if (bencode_dictionary_get_str(input, "file", &str)) {
